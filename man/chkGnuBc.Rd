@@ -4,7 +4,10 @@
 \alias{chkGnuBc}
 \title{Checks if GNU bc is availiable in the system}
 \usage{
-chkGnuBc()
+chkGnuBc(verbose = FALSE)
+}
+\arguments{
+\item{verbose}{A \link{logical} which controls printing the GNU bc version.}
 }
 \description{
 Checks if GNU bc is availiable in the system
