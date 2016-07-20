@@ -1,7 +1,9 @@
 #' Checks if GNU bc is availiable in the system
 #' 
+#' @param verbose A \link{logical} which controls printing the GNU bc version.
+#' 
 #' @export
-chkGnuBc <- function() {
+chkGnuBc <- function(verbose = FALSE) {
   versionString <-
     tryCatch(
       expr = system('bc --version', intern = TRUE, ignore.stderr = TRUE),
@@ -13,7 +15,9 @@ chkGnuBc <- function() {
   if (length(versionString) == 0L)
     return(FALSE)
   
-  message(versionString[1])
+  if (verbose)
+    message(versionString[1])
+  
   return(TRUE)
 }
 
