@@ -43,7 +43,7 @@ convertBase <- function(x, inputBase, outputBase) {
     Vectorize(FUN = .convertBaseScalar,
               vectorize.args = 'x')
   
-  return(.convertBaseVectorized(x, inputBase, outputBase))
+  return(.convertBaseVectorized(as.character(x), inputBase, outputBase))
 }
 
 #' Which numeral bases are convertible
